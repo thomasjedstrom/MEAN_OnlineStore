@@ -2,14 +2,14 @@
 <hr class="fw">
 
 <div class="leftnav">
-	<h4><u>Add a new customer</u></h4>
+	<h3><u>Add a Customer</u></h3>
 
 	<div ng-if="error">
 		<span class="error">{{ error }}</span>
 	</div>
 
 	<form ng-submit="create(newCustomer)">
-		<label for="name">Customer Name:</label>
+		<label for="name">Customer Name:</label><br>
 		<input type="text" ng-model="newCustomer.name">
 		<input type="submit" value="Add" class="btn blue">
 	</form>

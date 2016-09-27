@@ -13,9 +13,7 @@
 		<h3 class="cent"><u>Products</u></h3>	
 		
 		<div ng-repeat="product in products | filter:filter_all | limitTo: prodlimit as prodresults" class="productBox">
-			<div class="image">
-				<img ng-src="{{ product.image }}" alt="">
-			</div>
+			<img ng-src="{{ product.image }}" alt="">
 			<p>{{ product.product }}</p>
 			<p>({{ product.qty }} left)</p>
 		</div>

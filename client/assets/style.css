@@ -16,6 +16,9 @@
 #navbar *{
 	margin: 20px;
 }
+h1, h2, h3{
+	font-weight: bold;
+}
 /*HR*/
 hr{
     height: 30px;
@@ -57,6 +60,7 @@ table {
 th, td {
     border-left: 3px solid black;
     border-right: 3px solid black;
+    padding: 5px;
 }
 tr:nth-child(even) {background-color: #f2f2f2}
 th {
@@ -82,7 +86,7 @@ th {
 
 .btn{
 	display: inline-block;
-	margin: 25px;
+	margin: 5px;
 	text-decoration: none;
 	color: black;
 	border-radius: 0px;
@@ -103,6 +107,7 @@ th {
 input, textarea, select{
 	border: 3px solid black;
 	margin: 5px;
+	border-radius: 0%;
 }
 .error{
 	color: red;
@@ -117,6 +122,7 @@ input, textarea, select{
 	width: 15em;
 	height: 90vh;
 	background: lightgray;
+	padding: 5px;
 }
 
 /*=========== DASHBOARD ===============*/
@@ -128,7 +134,8 @@ input, textarea, select{
 .dashboardRow{
 	display: block;
 	margin: 0px;
-	flex-basis: 80vw;
+	flex: 1 1 80vw;
+	padding: 10px;
 }
 
 /*========== PRODUCTS ===============*/
