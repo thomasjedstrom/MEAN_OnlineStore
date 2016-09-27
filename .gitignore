@@ -44,6 +44,6 @@ jspm_packages
 *.tgz
 
 # Bower
-bower_components/
+
 
 .DS_Store
