@@ -4,7 +4,8 @@ var mongoose      = require('mongoose'),
     path          = require('path'),
     models_path   = path.join( __dirname, "../models"),
     reg           = new RegExp( ".js$", "i" ),
-    dbURI         = 'mongodb://localhost/mini_mean_store_db';
+    dbURI         = process.env.MONGO_URL;
+    // dbURI         = 'mongodb://localhost/mini_mean_store_db';
 
 mongoose.connect( dbURI );
 
