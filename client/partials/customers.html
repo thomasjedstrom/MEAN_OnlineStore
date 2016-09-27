@@ -1,7 +1,7 @@
 <h1 class="fw">Customers</h1>
 <hr class="fw">
 
-<div>
+<div class="leftnav">
 	<h4><u>Add a new customer</u></h4>
 
 	<div ng-if="error">
@@ -15,9 +15,12 @@
 	</form>
 </div>
 
-<div class="fw">
-	<input type="text" placeholder="search name..." ng-model="filter_customer">
-	<table>
+<div id="customers" class="fw">
+	<div class="right">
+		<input type="text" placeholder="search customers..." ng-model="filter_customer">
+	</div>
+	
+	<table class="cent">
 		<tr>
 			<th>Customer Name</th>
 			<th>Created Date</th>

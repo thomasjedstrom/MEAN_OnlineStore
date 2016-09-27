@@ -1,7 +1,7 @@
 <h1 class="fw">Orders</h1>
 <hr class="fw">
 
-<div>
+<div class="leftnav">
 	<h4><u>Add a new order</u></h4>
 	
 	<div ng-if="error">
@@ -9,14 +9,15 @@
 	</div>
 
 	<form ng-submit="create(newOrder)">
-		<label for="name">Customer</label>
+		<label for="name">Customer:</label>
 		<select ng-model="newOrder.customer">
 			<option ng-repeat="customer in customers" value="{{ $index }}">{{ customer.name }}</option>
-		</select>
+		</select><br>
 
-		<label for="qty">Order</label>
-		<input type="number" ng-model="newOrder.qty">
+		<label for="qty">QTY:</label>
+		<input type="number" ng-model="newOrder.qty"><br>
 
+		<label for="product">Product:</label>
 		<select ng-model="newOrder.product">
 			<option ng-repeat="product in products" value="{{ $index }}">{{ product.product }}</option>
 		</select>
@@ -26,8 +27,10 @@
 </div>
 
 
-<div class="fw">
-	<input type="text" placeholder="filter..." ng-model="filter_orders">
+<div id="orders">
+	<div class="right">
+		<input type="text" placeholder="search orders..." ng-model="filter_orders">
+	</div>
 	<table>
 		<tr>
 			<th>Customer Name</th>

@@ -2,15 +2,56 @@
 	font-family: sans-serif;
 }
 #wrapper{
+	max-width: 1200px;
+	margin: auto;
+}
+#body{
 	display: flex;
 	flex-wrap: wrap;
 }
+#navbar{
+	display: flex;
+	justify-content: flex-end;
+}
+#navbar *{
+	margin: 20px;
+}
+/*HR*/
+hr{
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before{ /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+
 .fw{
-	width: 100vw;
+	width: 100%;
+}
+.cent{
+	flex: 0 0 100%;
+	text-align: center;
+}
+.right{
+	flex: 0 0 100%;
+	text-align: right;
+	height: 30px;
 }
 table {
     border: 3px solid black;
     border-collapse: collapse;
+    margin: auto;
 }
 
 th, td {
@@ -59,7 +100,7 @@ th {
 	background: red;
 	color: white;
 }
-input, textarea{
+input, textarea, select{
 	border: 3px solid black;
 	margin: 5px;
 }
@@ -75,29 +116,7 @@ input, textarea{
 	display: block;
 	width: 15em;
 	height: 90vh;
-}
-
-
-
-
-/*========== PRODUCTS ===============*/
-#productListing{
-	display: block;
-	margin: 0px;
-	flex: 1;
-}
-.productBox{
-	display: inline-block;
-	width: 15em;
-	height: 10em;
-	margin: 12px;
-	text-align: center;
-}
-.image{
-	border: 3px solid black;
-	width: 150px;
-	height: 150px;
-	margin: auto;
+	background: lightgray;
 }
 
 /*=========== DASHBOARD ===============*/
@@ -112,19 +131,35 @@ input, textarea{
 	flex-basis: 80vw;
 }
 
-/*SLIDES*/
-#slides_control{
-	height: 200px;
+/*========== PRODUCTS ===============*/
+#products{
+	display: block;
+	margin: 0px;
+	flex: 1;
+}
+.productBox{
+	display: inline-block;
+	width: 15em;
+	height: 10em;
+	margin: 12px;
+	text-align: center;
 }
 img{
-	margin:auto;
-	width: 400px;
-}
-#slides_control {
-	position:absolute;
-	width: 400px;
-	left:50%;
-	top:20px;
-	margin-left:-200px;
+	border: 3px solid black;
+	width: 150px;
+	height: 150px;
+	margin: auto;
 }
 
+/*========== ORDERS ===============*/
+#orders{
+	padding: 20px;	
+	flex: 1 1 50vw;
+}
+
+
+/*========== CUSTOMERS ===============*/
+#customers{
+	padding: 20px;	
+	flex: 1 1 50vw;
+}

@@ -1,11 +1,6 @@
-<h1 class="fw">products</h1>
+<h1 class="fw">Products</h1>
 <hr class="fw">
 <div class="leftnav">
-	<form>
-		<input type="text" placeholder="search...">
-		<input type="submit" value="Filter" class="btn">
-	</form>
-
 	<h3><u>Add a new Product</u></h3>
 	<form ng-submit="create(newProduct)">
 		<label for="name">Name:</label><br>
@@ -24,10 +19,14 @@
 	</form>
 </div>
 
-<div id="productListing">
-	<div ng-repeat="product in products" class="productBox">
+<div id="products">
+	<div class="right">
+		<input type="text" placeholder="search products..." ng-model="filter_products">
+	</div>
+
+	<div ng-repeat="product in products | filter:filter_products" class="productBox">
 		<div class="image">
-			(image)
+			<img ng-src="{{ product.image }}" alt="">
 		</div>
 		<p>{{ product.product }}</p>
 		<p>({{ product.qty }} left)</p>
