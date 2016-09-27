@@ -22,21 +22,24 @@ h1, h2, h3{
 }
 /*HR*/
 hr{
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
+	height: 30px;
+	flex: 1 1 80%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px 0 0 0;
+	border-radius: 20px;
+	margin-bottom: 0px;
 }
-hr:before{ /* Not really supposed to work, but does */
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;
+hr:before{
+	display: block;
+	content: "";
+	height: 30px;
+	margin-top: -31px;
+	border-style: solid;
+	border-color: black;
+	border-width: 0 0 1px 0;
+	border-radius: 20px;
+	margin-bottom: 0px;
 }
 
 
@@ -53,20 +56,20 @@ hr:before{ /* Not really supposed to work, but does */
 	height: 30px;
 }
 table {
-    border: 3px solid black;
-    border-collapse: collapse;
-    margin: auto;
+	border: 3px solid black;
+	border-collapse: collapse;
+	margin: auto;
 }
 
 th, td {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    padding: 5px;
+	border-left: 3px solid black;
+	border-right: 3px solid black;
+	padding: 5px;
 }
 tr:nth-child(even) {background-color: #f2f2f2}
 th {
-    background-color: gray;
-    color: white;
+	background-color: gray;
+	color: white;
 }
 
 .panel{
@@ -120,10 +123,10 @@ input, textarea, select{
 }
 .leftnav{
 	display: block;
-	width: 15em;
 	height: 90vh;
 	background: lightgray;
 	padding: 5px;
+	flex: 0 0 15em;
 }
 
 /*=========== DASHBOARD ===============*/
@@ -131,19 +134,21 @@ input, textarea, select{
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1;
+	align-items: flex-start;
+	align-content: flex-start;
 }
 .dashboardRow{
 	display: block;
 	margin: 0px;
 	flex: 1 1 80vw;
-	padding: 10px;
+	padding: 0px 10px;
 }
 
 /*========== PRODUCTS ===============*/
 #products{
 	display: block;
 	margin: 0px;
-	flex: 1;
+	flex: 1 1 50vw;
 }
 .productBox{
 	display: inline-block;
@@ -161,13 +166,11 @@ img{
 
 /*========== ORDERS ===============*/
 #orders{
-	padding: 20px;	
 	flex: 1 1 50vw;
 }
 
 
 /*========== CUSTOMERS ===============*/
 #customers{
-	padding: 20px;	
 	flex: 1 1 50vw;
 }

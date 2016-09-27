@@ -1,5 +1,4 @@
 <h1 class="fw cent">Dashboard</h1>
-<hr class="fw">
 
 <div class="leftnav">
 	<h4><b>Filter All Results:</b></h4>
@@ -7,7 +6,7 @@
 </div>
 
 <div id="dashboardContainer">
-
+	<hr>
 	<!-- Products -->
 	<div class="dashboardRow">
 		<h3 class="cent"><u>Products</u></h3>	
@@ -22,6 +21,8 @@
 		</div>
 	</div>
 
+	<hr>
+
 	<!-- Orders -->
 	<div class="dashboardRow">
 		<h3 class="cent"><u>Recent Orders</u></h3>
@@ -31,6 +32,8 @@
 			<button ng-hide="orderresults.length === orders.length" ng-click="orderlimit = orderlimit +3" class="btn blue">show more...</button>	
 		</div>
 	</div>
+
+	<hr>
 
 	<!-- Customers -->
 	<div class="dashboardRow">
