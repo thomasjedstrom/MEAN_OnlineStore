@@ -1,0 +1,69 @@
+<h1 class="fw">dashboard</h1>
+<hr class="fw">
+
+<div class="leftnav">
+	<input type="text" ng-model="filter_all" placeholder="search...">	
+</div>
+
+<div id="dashboardContainer">
+
+	<!-- Slides -->
+
+
+
+	<div ng-controller="CarouselDemoCtrl" id="slides_control">
+		<carousel interval="myInterval">
+			<slide ng-repeat="slide in slides" active="slide.active">
+				<img ng-src="{{slide.image}}">
+				<div class="carousel-caption">
+					<h4>Slide {{$index+1}}</h4>
+				</div>
+			</slide>
+		</carousel>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Products -->
+	<div class="dashboardRow">
+		<div ng-repeat="product in products | limitTo: prodlimit as prodresults " class="productBox">
+			<div class="image">
+				(image)
+			</div>
+			<p>{{ product.product }}</p>
+			<p>({{ product.qty }} left)</p>
+		</div>
+		<button ng-hide="prodresults.length === products.length" ng-click="prodlimit = prodlimit +3">show more...</button>
+	</div>
+
+	<!-- Orders -->
+	<div class="dashboardRow">
+		<h4><u>Recent Orders</u></h4>
+		<p ng-repeat="order in orders | limitTo: orderlimit as orderresults ">{{ order.customer.name }} purchased {{ order.qty }} {{ order.product.product }}... <time am-time-ago="order.created_at"></time></p>
+		<button ng-hide="orderresults.length === orders.length" ng-click="orderlimit = orderlimit +3">show more...</button>
+	</div>
+
+	<!-- Customers -->
+	<div class="dashboardRow">
+		<h4><u>New Customers</u></h4>
+		<p ng-repeat="customer in customers | limitTo: custlimit as custresults ">{{ customer.name }} joined the store. (<time am-time-ago="customer.created_at"></time>)</p>
+		<button ng-hide="custresults.length === customers.length" ng-click="custlimit = custlimit +3">show more...</button>
+	</div>
+</div>
+
+
+<!-- <div>
+  <foo ng-repeat="item in items | limitTo: limit as results"></foo>
+</div>
+<button ng-hide="results.length === items.length" 
+		ng-click="limit = limit +2">show more...</button> -->
