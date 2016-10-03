@@ -149,7 +149,7 @@ input, textarea, select{
 #products{
 	display: block;
 	margin: 0px;
-	flex: 1 1 50vw;
+	flex: 2 2 50px;
 }
 .productBox{
 	display: inline-block;
