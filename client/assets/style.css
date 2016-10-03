@@ -167,11 +167,11 @@ img{
 
 /*========== ORDERS ===============*/
 #orders{
-	flex: 1 1 50vw;
+	flex: 2 2 50px;
 }
 
 
 /*========== CUSTOMERS ===============*/
 #customers{
-	flex: 1 1 50vw;
+	flex: 2 2 50px;
 }
